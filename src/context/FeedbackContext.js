@@ -13,12 +13,12 @@ export const FeedbackProvider = ({ children }) => {
     {
       id: 2,
       text: "This is feedback item 2",
-      rating: 10,
+      rating: 9,
     },
     {
       id: 3,
       text: "This is feedback item 3",
-      rating: 10,
+      rating: 7,
     },
   ]);
 
@@ -34,7 +34,7 @@ export const FeedbackProvider = ({ children }) => {
       setFeedback(feedback.filter((item) => item.id !== id));
     }
   };
-  const [feebackEdit, setFeedbackEdit] = useState({
+  const [feedbackEdit, setFeedbackEdit] = useState({
     item: {},
     edit: false,
   });
@@ -54,6 +54,7 @@ export const FeedbackProvider = ({ children }) => {
         deleteFeedback,
         addFeedback,
         editFeedback,
+        feedbackEdit,
       }}
     >
       {children}
